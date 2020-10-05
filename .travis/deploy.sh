@@ -1,7 +1,7 @@
 #!/bin/sh
 
 mkdir target/github-pages
-git clone --single-branch --branch gh-pages https://cohenerez:$GITHUB_TOKEN@github.com/cohenerez/Sanity.git target/github-pages
+git clone --single-branch --branch gh-pages https://cohenerez:$GITHUB_TOKEN@github.com/cohenerez/sanity.git target/github-pages
 cp -R target/github-pages/history target/allure-results/
 mvn allure:report
 cp -R target/site/allure-maven-plugin/* target/github-pages/
