@@ -1,0 +1,16 @@
+language: java
+
+addons:
+  browserstack:
+    USERNAME: "erezcohen5"
+    access_key: "kYYWQyi9GAMDN1pzpZXc"
+before_install:
+  - export TZ=Asia/Jerusalem
+  - date
+install: true
+script:
+  mvn clean test -Dselenium.host=cloud -Dselenium.hostURL=https://erezcohen5:kYYWQyi9GAMDN1pzpZXc@hub-cloud.browserstack.com/wd/hub -Dtravis.buildNumber=$TRAVIS_BUILD_NUMBER -Dtravis.buildURL=$TRAVIS_BUILD_WEB_URL -Dtravis.branch=$TRAVIS_BRANCH
+
+after_script:
+  - chmod 777 .travis/deploy.sh
+  - .travis/deploy.sh
