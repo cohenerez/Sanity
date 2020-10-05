@@ -36,7 +36,7 @@ public class ApplicationAction {
     }
 
     public boolean isElementNotDisplayed(WebElement element) {
-        int time = 3;
+      
         return isElementNotDisplayed(element, EnvironmentVariables.DEFAULT_TIMEOUT);
     }
 
