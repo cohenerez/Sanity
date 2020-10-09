@@ -5,7 +5,7 @@ import com.erez.xfashionsanity.solutionpages.ItemPage;
 import static org.testng.Assert.*;
 
 
-public class ItemTest {
+public class ItemTest extends BaseTest {
 
     @Test
     public void addItemToCart() {
