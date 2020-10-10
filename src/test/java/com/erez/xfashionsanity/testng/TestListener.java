@@ -58,12 +58,12 @@ public class TestListener implements ITestListener {
     }
 
 
-    @Link("https://automate.browserstack.com/builds/1711f102333a2a1866ceafe22bf72833e29d8c9d/sessions/  {aurl}" )
-    private void browserStackLinkGenerator() {
-      String  aurl =  ApplicationDriver.get().getSession(ApplicationDriver.get().getDriver());
-
-
-    }
-
+    
+private void browserStackLinkGenerator() {
+		Allure.addLinks(new Link()
+			.setName("BrowserStack")
+			.setUrl("https://automate.browserstack.com/builds/1711f102333a2a1866ceafe22bf72833e29d8c9d/sessions/" + ApplicationDriver.get().getSession(ApplicationDriver.get().getDriver())));
+	}
+    
 
 }
