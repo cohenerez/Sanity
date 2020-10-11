@@ -31,7 +31,7 @@ public class CheckOutTest  extends BaseTest {
     public void checkCorrectCalculationOfDiscount(){
 
         List<Double> priceData = new ArrayList<>();
-        ItemPage itemPage = new ItemPage("index.php?id_product=2&controller=product").get();
+        ItemPage itemPage = new ItemPage("index.php?id_product=5&controller=product").get();
         itemPage.clickAddToCart();
         CheckOutPage checkOutPage = itemPage.clickCheckout();
         priceData = checkOutPage.retrievePriceAndDiscount("Printed Summer Dress");
