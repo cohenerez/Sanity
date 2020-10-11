@@ -59,11 +59,10 @@ public class TestListener implements ITestListener {
 
 
     
-private void browserStackLinkGenerator() {
-		Allure.addLinks(new Link()
-			.setName("BrowserStack")
-			.setUrl("https://automate.browserstack.com/builds/1711f102333a2a1866ceafe22bf72833e29d8c9d/sessions/" + ApplicationDriver.get().getSession(ApplicationDriver.get().getDriver())));
-	}
-    
+ @Link("https://automate.browserstack.com/builds/1711f102333a2a1866ceafe22bf72833e29d8c9d/sessions/{restURL}" )
+    private void browserStackLinkGenerator() {
+       String restURL =  ApplicationDriver.get().getSession(ApplicationDriver.get().getDriver());
+    }
+
 
 }
